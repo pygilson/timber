@@ -39,4 +39,4 @@ jobs:
           token: ${{ secrets.GH_ACCESS_TOKEN }}
           event-type: image-tag-update
           repository: ${{ github.actor }}/timber-gitops-config
-          client-payload: '{"tag": "${{ github.sha }}","username": "${{ secrets.DOCKERHUB_USERNAME }}"}'
+          client-payload: '{"tag": "${{ github.sha }}","username": "${{ secrets.DOCKERHUB_USERNAME }}","url": "docker.io/${{ secrets.DOCKERHUB_USERNAME }}/timber-backend:${{ github.sha }}"}'
